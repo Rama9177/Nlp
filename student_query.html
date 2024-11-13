@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Test Issue</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 500px;
+            margin-top: 50px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Report an Issue</h2>
+        <form method="POST" action="{{ url_for('student_query1') }}">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="name" required>
+            </div>
+
+            <!-- Issue with Test Number -->
+            <div class="form-group">
+                <label for="test_number">Test Number:</label>
+                <input type="number" class="form-control" id="test_number" name="test_number" placeholder="test_number" required>
+            </div>
+
+            <!-- Question Number -->
+            <div class="form-group">
+                <label for="question_number">Question Number:</label>
+                <input type="number" class="form-control" id="question_number" name="question_number" placeholder="question_number" required>
+            </div>
+
+            <!-- Answer -->
+            <div class="form-group">
+                <label for="answer">Answer:</label>
+                <textarea class="form-control" id="answer" name="answer" rows="4" placeholder="answer" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit Issue</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

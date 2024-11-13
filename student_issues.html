@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Question Answers</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Student Issues</h2>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>test_number</th>
+                    <th>questions_number</th>
+                    <th>answer</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for question in questions %}
+                <tr>
+                    <td>{{ question[0] }}</td>
+                    <td>{{ question[1] }}</td>
+                    <td>{{ question[2] }}</td>
+                    <td>{{ question[3] }}</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('student_home') }}" class="btn btn-primary">Back to Home</a>
+    </div>
+</body>
+</html>
